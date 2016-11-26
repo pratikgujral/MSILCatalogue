@@ -1,0 +1,66 @@
+﻿<Page
+    x:Class="MsilCatalogue.CarDetails"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:MsilCatalogue"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid x:Name="LayoutRoot">
+
+        <Grid.ChildrenTransitions>
+            <TransitionCollection>
+                <EntranceThemeTransition/>
+            </TransitionCollection>
+        </Grid.ChildrenTransitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!-- Title Panel -->
+        <StackPanel Grid.Row="0" Margin="19,0,0,0">
+            <TextBlock Text="MARUTI SUZUKI" Style="{ThemeResource TitleTextBlockStyle}" Margin="0,12,0,0"/>
+            <Grid HorizontalAlignment="Left">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Image Source="/Assets/images/msilLogo.png" Height="35" Grid.Row="0" Grid.Column="0"/>
+                <TextBlock x:Name="TextBlockPageTitle" Text="{Binding}" Margin="0,-6.5,0,6.5" Style="{ThemeResource HeaderTextBlockStyle}" CharacterSpacing="{ThemeResource PivotHeaderItemCharacterSpacing}"
+                           Grid.Row="0" Grid.Column="1"/>
+
+            </Grid>
+        </StackPanel>
+
+        <!--TODO: Content should be placed within the following grid-->
+        <Grid Grid.Row="1" x:Name="ContentRoot" Margin="19,9.5,19,0">
+            
+                <ScrollViewer HorizontalScrollMode="Disabled" VerticalScrollMode="Auto"
+                              VerticalScrollBarVisibility="Auto">
+                <StackPanel Orientation="Vertical">
+                    <ComboBox x:Name="ComboBoxState" ItemsSource="{Binding}" SelectionChanged="ComboBoxState_SelectionChanged">
+                        <ComboBox.Header>STATE</ComboBox.Header>
+                    </ComboBox>
+
+                    <ComboBox x:Name="ComboBoxCity" ItemsSource="{Binding}" IsEnabled="False" SelectionChanged="ComboBoxCity_SelectionChanged">
+                        <ComboBox.Header>CITY</ComboBox.Header>
+                    </ComboBox>
+                    
+                    <TextBlock x:Name="TextBlockCarDetails" Style="{ThemeResource BodyTextBlockStyle}"
+                               Text="{Binding}"/>
+                </StackPanel>
+            </ScrollViewer>
+                
+                
+            
+        </Grid>
+    </Grid>
+</Page>

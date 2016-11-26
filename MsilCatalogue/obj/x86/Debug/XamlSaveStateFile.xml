@@ -1,0 +1,15 @@
+<XamlCompilerSaveState>
+  <ReferenceAssemblyList>
+    <LocalAssembly PathName="c:\users\pratikgujral\documents\visual studio 2013\projects\msilcatalogue\msilcatalogue\obj\x86\debug\intermediatexaml\msilcatalogue.exe" HashGuid="b51e877f-350a-7df6-fd58-19eb9e9f3578" />
+    <ReferenceAssembly PathName="c:\program files (x86)\microsoft sdks\windowsphoneapp\v8.1\extensionsdks\microsoft.vclibs\12.0\references\commonconfiguration\neutral\platform.winmd" HashGuid="58b6b6d1-928e-9908-9804-eb460e5e101b" />
+    <ReferenceAssembly PathName="c:\users\pratikgujral\documents\visual studio 2013\projects\msilcatalogue\packages\microsoft.applicationinsights.runtimetelemetry.0.14.0-build20632\lib\portable-win81+wpa81\microsoft.applicationinsights.extensibility.runtimetelemetry.winmd" HashGuid="9ff0b6e6-943c-898e-8ccb-41d423e7a41c" />
+    <ReferenceAssembly PathName="c:\users\pratikgujral\documents\visual studio 2013\projects\msilcatalogue\packages\microsoft.applicationinsights.windowsphone.0.14.0-build20632\lib\wpa81\microsoft.applicationinsights.extensibility.windows.winmd" HashGuid="5e031279-2140-f478-b281-e0fac35c58b1" />
+    <ReferenceAssembly PathName="c:\users\pratikgujral\documents\visual studio 2013\projects\msilcatalogue\packages\microsoft.applicationinsights.0.14.0-build20632\lib\portable-win81+wpa81\microsoft.applicationinsights.winmd" HashGuid="dd9ac78a-d702-71e2-45f8-aafdfea3cb54" />
+    <ReferenceAssembly PathName="c:\users\pratikgujral\documents\visual studio 2013\projects\msilcatalogue\packages\microsoft.data.edm.5.6.2\lib\portable-net40+sl5+wp8+win8+wpa\microsoft.data.edm.dll" HashGuid="652859ac-63b5-9ab0-7a6b-0cb8dfcd265f" />
+    <ReferenceAssembly PathName="c:\users\pratikgujral\documents\visual studio 2013\projects\msilcatalogue\packages\microsoft.data.odata.5.6.2\lib\portable-net40+sl5+wp8+win8+wpa\microsoft.data.odata.dll" HashGuid="4e84b0db-d22a-61af-6343-dd7cc7f44046" />
+    <ReferenceAssembly PathName="c:\users\pratikgujral\documents\visual studio 2013\projects\msilcatalogue\packages\microsoft.diagnostics.tracing.eventsource.redist.1.1.16-beta\lib\net45\microsoft.diagnostics.tracing.eventsource.dll" HashGuid="80297b0f-1235-0f77-6fca-4fb05d72d4c7" />
+    <ReferenceAssembly PathName="c:\users\pratikgujral\documents\visual studio 2013\projects\msilcatalogue\packages\windowsazure.storage.4.3.0\lib\wpa\microsoft.windowsazure.storage.dll" HashGuid="69d1254a-41d8-4cd8-9ab3-c7714bab061b" />
+    <ReferenceAssembly PathName="c:\users\pratikgujral\documents\visual studio 2013\projects\msilcatalogue\packages\newtonsoft.json.7.0.1\lib\portable-net40+sl5+wp80+win8+wpa81\newtonsoft.json.dll" HashGuid="0b4cdfc1-2257-2e75-23cf-4052e97b309e" />
+    <ReferenceAssembly PathName="c:\users\pratikgujral\documents\visual studio 2013\projects\msilcatalogue\packages\system.spatial.5.6.2\lib\portable-net40+sl5+wp8+win8+wpa\system.spatial.dll" HashGuid="4e779b7f-3e1d-55d1-cac0-694ae2344f0d" />
+  </ReferenceAssemblyList>
+</XamlCompilerSaveState>

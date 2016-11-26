@@ -1,0 +1,1 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Files><file>\Microsoft.ApplicationInsights.Extensibility.RuntimeTelemetry.winmd</file><file>\Microsoft.ApplicationInsights.Extensibility.Windows.winmd</file><file>\Microsoft.ApplicationInsights.winmd</file><file>\Microsoft.Diagnostics.Tracing.EventSource.dll</file><file>\MsilCatalogue.exe</file></Files>

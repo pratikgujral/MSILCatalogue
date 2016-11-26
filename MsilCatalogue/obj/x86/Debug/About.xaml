@@ -1,0 +1,150 @@
+﻿<Page
+    x:Class="MsilCatalogue.About"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:MsilCatalogue"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid x:Name="LayoutRoot">
+
+        <Grid.ChildrenTransitions>
+            <TransitionCollection>
+                <EntranceThemeTransition/>
+            </TransitionCollection>
+        </Grid.ChildrenTransitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+         <!--Title Panel--> 
+        <StackPanel Grid.Row="0" Margin="19,0,0,0">
+            <TextBlock Text="MARUTI SUZUKI" Style="{ThemeResource TitleTextBlockStyle}" Margin="0,12,0,0"/>
+            <Grid HorizontalAlignment="Left">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Image Source="/Assets/images/msilLogo.png" Height="34" Grid.Row="0" Grid.Column="0" VerticalAlignment="Center"/>
+                <TextBlock Text="about" Margin="0,-7.5,0,6.5" Style="{ThemeResource HeaderTextBlockStyle}" CharacterSpacing="{ThemeResource PivotHeaderItemCharacterSpacing}"
+                           Grid.Row="0" Grid.Column="1" VerticalAlignment="Center"/>
+
+                <ProgressBar x:Name="ProgressBarBusy" IsIndeterminate="True" Height="Auto" Visibility="Collapsed"
+                           Grid.Row="1" Grid.ColumnSpan="2"/>
+            </Grid>
+        </StackPanel>
+
+        <!--TODO: Content should be placed within the following grid-->
+        <Grid Grid.Row="1" x:Name="ContentRoot" Margin="19,9.5,19,0">
+            <ScrollViewer HorizontalScrollMode="Disabled" VerticalScrollMode="Auto"
+                          VerticalScrollBarVisibility="Auto" >
+                <StackPanel Orientation="Vertical">
+                    <TextBlock Style="{ThemeResource BodyTextBlockStyle}" 
+                               Text="This app displays the gamut of cars produced by Maruti Suzuki India Ltd. &#10;"/>
+                
+                    <Line HorizontalAlignment="Stretch" 
+                          StrokeThickness="10" Stroke="Red" X1="0" X2="800"/>
+
+
+                     <!--REPORT A BUG--> 
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition />
+                            <ColumnDefinition />
+                        </Grid.ColumnDefinitions>
+
+                        <TextBlock Text="Report a bug" Style="{ThemeResource TitleTextBlockStyle}" 
+                                   HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        <ToggleButton x:ConnectionId='4' x:Name="ToggleButtonReportBug" Content="Open/Close"                                     
+                                  Grid.Row="0" Grid.Column="1" />
+                    </Grid>
+
+                    <StackPanel x:Name="StackPanelReportBug" Orientation="Vertical" Visibility="Collapsed" >
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="1*"/>
+                                <ColumnDefinition Width="3*"/>
+                            </Grid.ColumnDefinitions>
+
+                            <TextBlock Text="Your Name" Style="{ThemeResource BodyTextBlockStyle}" 
+                                       Grid.Row="0" Grid.Column="0" VerticalAlignment="Center"/>
+                            <TextBox x:Name="TextBoxReportBugName" Grid.Row="0" Grid.Column="1"
+                                     InputScope="AlphanumericHalfWidth"/>
+                            <TextBlock Text="Phone" Style="{ThemeResource BodyTextBlockStyle}"
+                                       Grid.Row="1" Grid.Column="0" VerticalAlignment="Center"/>
+                            <TextBox x:Name="TextBoxReportBugPhone" Grid.Row="1" Grid.Column="1" 
+                                     InputScope="TelephoneNumber"/>
+
+                            <TextBlock Text="Description" Style="{ThemeResource BodyTextBlockStyle}"
+                                       Grid.Row="2" Grid.ColumnSpan="2" HorizontalAlignment="Center"/>
+                            <TextBox x:Name="TextBoxReportBugDescription" MaxHeight="200" InputScope="AlphanumericFullWidth"
+                                     Grid.Row="3" Grid.ColumnSpan="2" AcceptsReturn="True" TextWrapping="Wrap"
+                                     ScrollViewer.VerticalScrollBarVisibility="Visible">
+                            </TextBox>     
+                        </Grid>
+                        <Button x:ConnectionId='3' x:Name="ButtonReportBugSendEmail" Content="Send Email" HorizontalAlignment="Stretch"
+                                                                      />
+                    </StackPanel>
+
+                    <Line HorizontalAlignment="Stretch" 
+                          StrokeThickness="10" Stroke="Red" X1="0" X2="800"/>
+
+                     <!--Developers--> 
+                    <TextBlock Text="Connect with developers" Style="{ThemeResource TitleTextBlockStyle}"
+                               HorizontalAlignment="Center"/>
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="1*"/>
+                            <ColumnDefinition Width="Auto"/>
+                            
+                        </Grid.ColumnDefinitions>
+
+                        <TextBlock Text="Pratik Gujral" Style="{ThemeResource BodyTextBlockStyle}"
+                                   Grid.Row="0" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                        <StackPanel Orientation="Horizontal" Grid.Row="0" Grid.Column="1">
+                            <HyperlinkButton NavigateUri="https://www.linkedin.com/profile/view?id=93836892919">
+                                <Image Source="/Assets/images/linkedin.png" 
+                               Height="60"/>
+                            </HyperlinkButton>
+                            <HyperlinkButton x:ConnectionId='2' x:Name="HyperlinkButtonFacebookPratikGujral"                                                   >
+                                <Image Source="/Assets/images/facebook.png" 
+                               Height="60"/>
+                            </HyperlinkButton>
+                        </StackPanel>
+                         <TextBlock Text="Urmila Yadav" Style="{ThemeResource BodyTextBlockStyle}"
+                                   Grid.Row="1" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                        <StackPanel Orientation="Horizontal" Grid.Row="1" Grid.Column="1">
+                            <HyperlinkButton NavigateUri="https://www.linkedin.com/profile/view?id=113227631" IsEnabled="False">
+                                <Image Source="/Assets/images/linkedin.png" 
+                               Height="60"/>
+                            </HyperlinkButton>
+                            <HyperlinkButton x:ConnectionId='1' x:Name="HyperlinkButtonFacebookUrmilaYadav"                                                 >
+                                <Image Source="/Assets/images/facebook.png" 
+                               Height="60"/>
+                            </HyperlinkButton>
+                        </StackPanel>
+                    </Grid>
+                </StackPanel>
+            </ScrollViewer>
+        </Grid>
+    </Grid>
+</Page>
+
